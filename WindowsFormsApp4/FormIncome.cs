@@ -102,6 +102,12 @@ namespace WindowsFormsApp4
             txtMemo.Text = dgvIncome.Rows[e.RowIndex].Cells["메모"].Value.ToString();
         }
 
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
         // ============================
         //     6. 입력창 초기화
         // ============================

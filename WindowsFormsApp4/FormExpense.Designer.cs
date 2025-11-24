@@ -39,6 +39,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormExpense));
             this.panelTop = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.panelInput = new System.Windows.Forms.Panel();
@@ -54,6 +55,8 @@
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.dgvExpense = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panelTop.SuspendLayout();
             this.panelInput.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExpense)).BeginInit();
@@ -62,7 +65,9 @@
             // panelTop
             // 
             this.panelTop.BackColor = System.Drawing.Color.IndianRed;
+            this.panelTop.Controls.Add(this.button1);
             this.panelTop.Controls.Add(this.lblTitle);
+            this.panelTop.Controls.Add(this.dtpDate);
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(0, 0);
             this.panelTop.Name = "panelTop";
@@ -83,11 +88,11 @@
             // panelInput
             // 
             this.panelInput.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panelInput.Controls.Add(this.comboBox1);
             this.panelInput.Controls.Add(this.lblDate);
             this.panelInput.Controls.Add(this.lblCategory);
             this.panelInput.Controls.Add(this.lblAmount);
             this.panelInput.Controls.Add(this.lblMemo);
-            this.panelInput.Controls.Add(this.dtpDate);
             this.panelInput.Controls.Add(this.cmbCategory);
             this.panelInput.Controls.Add(this.txtAmount);
             this.panelInput.Controls.Add(this.txtMemo);
@@ -108,7 +113,7 @@
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(100, 23);
             this.lblDate.TabIndex = 0;
-            this.lblDate.Text = "날짜";
+            this.lblDate.Text = "결제수단";
             // 
             // lblCategory
             // 
@@ -140,7 +145,7 @@
             // dtpDate
             // 
             this.dtpDate.Font = new System.Drawing.Font("맑은 고딕", 10F);
-            this.dtpDate.Location = new System.Drawing.Point(110, 17);
+            this.dtpDate.Location = new System.Drawing.Point(531, 12);
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Size = new System.Drawing.Size(200, 34);
             this.dtpDate.TabIndex = 4;
@@ -244,6 +249,30 @@
             this.dgvExpense.TabIndex = 0;
             this.dgvExpense.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvExpense_CellClick);
             // 
+            // button1
+            // 
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.IndianRed;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(737, 14);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(20, 20);
+            this.button1.TabIndex = 4;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Font = new System.Drawing.Font("맑은 고딕", 10F);
+            this.comboBox1.Items.AddRange(new object[] {
+            "현금",
+            "카드"});
+            this.comboBox1.Location = new System.Drawing.Point(110, 16);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(200, 36);
+            this.comboBox1.TabIndex = 11;
+            // 
             // FormExpense
             // 
             this.ClientSize = new System.Drawing.Size(800, 600);
@@ -262,5 +291,8 @@
 
         }
         #endregion
+
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
